@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Hospital extends Department{
 
     private final String hospitalName;
-    ArrayList<Department> getDepartments = new ArrayList<Department>();
+    ArrayList<Department> Departments = new ArrayList<Department>();
 
     public Hospital(String hospitalName) {
         this.hospitalName = hospitalName;
@@ -23,7 +23,7 @@ public class Hospital extends Department{
     public String toString() {
         return "Hospital{" +
                 "hospitalName='" + hospitalName + '\'' +
-                ", getDepartments=" + getDepartments +
+                ", getDepartments=" + Departments +
                 '}';
     }
 }
