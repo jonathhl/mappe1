@@ -4,12 +4,12 @@ public class Patient extends Person {
 
     private String diagnosis;
 
-    public Patient(String firstName, String lastName, String socialSecurityNumber, String diagnosis) {
+    protected Patient(String firstName, String lastName, String socialSecurityNumber, String diagnosis) {
         super(firstName, lastName, socialSecurityNumber);
         this.diagnosis = diagnosis;
     }
 
-    public String getDiagnosis() {
+    protected String getDiagnosis() {
         return diagnosis;
     }
 

@@ -8,7 +8,6 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee:" + Employee;
+        return super.toString();
     }
-
 }
