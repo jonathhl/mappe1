@@ -1,6 +1,7 @@
 package edu.ntnu.jonathhl.idatt2001;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * Class dedicated to hold info and registries on registered patients and/or employees in their respected departments.
@@ -66,8 +67,17 @@ public class Department {
         return register;
     }
 
-     /*
-     The class diagram specifies that the code should include hashcode and equals -methods. I won't add this as hashmap
-     uses keys to search the list. i.e hashcode and equals are unnecessary.
-      */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Department that = (Department) o;
+        return departmentName.equals(that.departmentName) && patientRegister.equals(that.patientRegister)
+                && employeeRegister.equals(that.employeeRegister);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(departmentName, patientRegister, employeeRegister);
+    }
 }
