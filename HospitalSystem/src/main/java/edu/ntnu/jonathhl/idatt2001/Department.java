@@ -67,6 +67,21 @@ public class Department {
         return register;
     }
 
+    /**
+     * Method that makes the program able to remove either a patient or an employee. It contains an if-statement that
+     * checks patientRegister first for the specified key (in this case Social Security Number), and goes through
+     * the employee list instead if there are no patients found. The method then proceeds to remove that person from the
+     * system.
+     * @param person
+     */
+    public void remove(Person person) {
+        if(patientRegister.containsKey(person.getSocialSecurityNumber())) {
+            patientRegister.remove(person.getSocialSecurityNumber());
+        } else if(employeeRegister.containsKey(person.getSocialSecurityNumber())) {
+            employeeRegister.remove(person.getSocialSecurityNumber());
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
