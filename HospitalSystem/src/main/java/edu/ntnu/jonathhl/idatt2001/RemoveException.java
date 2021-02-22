@@ -1,6 +1,10 @@
 package edu.ntnu.jonathhl.idatt2001;
 
-
+/**
+ * Exception class
+ * @author Jonathan Løseth
+ * @version 1.0.0
+ */
 public class RemoveException extends Exception {
     /**
      * Constructs a new exception with {@code null} as its detail message.

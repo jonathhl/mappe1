@@ -1,6 +1,8 @@
 package edu.ntnu.jonathhl.idatt2001;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,13 +19,10 @@ public class Department {
     /**
      * Constructor-method for the class.
      * @param departmentName Takes the name of the department
-     * @param patientRegister Takes the registry with patient info.
-     * @param employeeRegister Takes the registry with employee info.
      */
-    public Department(String departmentName, HashMap<String, Patient> patientRegister, HashMap<String, Employee> employeeRegister) {
+    public Department(String departmentName) {
         this.departmentName = departmentName;
-        this.patientRegister = patientRegister;
-        this.employeeRegister = employeeRegister;
+
     }
 
     public String getDepartmentName() {
@@ -46,9 +45,8 @@ public class Department {
         }
     }
 
-    public String getEmployeeRegister(String register) {
-        register += employeeRegister.toString();
-        return register;
+    public List<Employee> getEmployeeRegister() {
+        return new ArrayList<>(employeeRegister.values());
     }
 
     /**
