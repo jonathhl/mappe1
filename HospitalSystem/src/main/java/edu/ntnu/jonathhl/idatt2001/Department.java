@@ -74,11 +74,13 @@ public class Department {
      * system.
      * @param person
      */
-    public void remove(Person person) {
+    public void remove(Person person) throws RemoveException {
         if(patientRegister.containsKey(person.getSocialSecurityNumber())) {
             patientRegister.remove(person.getSocialSecurityNumber());
         } else if(employeeRegister.containsKey(person.getSocialSecurityNumber())) {
             employeeRegister.remove(person.getSocialSecurityNumber());
+        } else {
+            throw new RemoveException("Could not find the specified person.");
         }
     }
 
