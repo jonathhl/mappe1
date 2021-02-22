@@ -1,17 +1,35 @@
 package edu.ntnu.jonathhl.idatt2001;
 
+/**
+ * Abstract class containing attributes on personal info.
+ * @author Jonathan Løseth
+ * @version 1.0.0
+ */
 public abstract class Person {
 
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
 
+    /**
+     * Constructor that takes all info from the attributes.
+     * @param firstName
+     * @param lastName
+     * @param socialSecurityNumber
+     */
     public Person(String firstName, String lastName, String socialSecurityNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
+    /**
+     * Method to combine the first and last names into one complete string.
+     * @param firstName
+     * @param lastName
+     * @param fullName
+     * @return
+     */
     public String getFullName(String firstName, String lastName, String fullName) {
         return fullName += firstName + " " + lastName;
     }
